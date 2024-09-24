@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { makeOrdered, makeOrderedSlice } from "./makeOrderedSlice";
+import { makeOrderedSlice } from "./makeOrderedSlice"; 
 
 export const store = configureStore({
   reducer: {
-    [makeOrdered.name]: makeOrderedSlice.reducer,
+    makeOrdered: makeOrderedSlice.reducer, 
   },
 });
+
+export type RootState = ReturnType<typeof store.getState>;

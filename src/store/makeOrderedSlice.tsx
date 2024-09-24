@@ -1,8 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { ProductTypes } from "../types";
 import { toast } from "react-toastify";
-import { PagesStructure } from "../enums";
-import { useNavigate } from "react-router-dom";
 
 const initialState = {
   products: [] as Array<ProductTypes>,
